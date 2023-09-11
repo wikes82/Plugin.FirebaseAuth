@@ -123,7 +123,7 @@ namespace Plugin.FirebaseAuth
         {
             try
             {
-                var result = await _user.ReauthenticateAndRetrieveDataAsync(credential.ToNative()).ConfigureAwait(false);
+                var result = await _user.Reauthenticate(credential.ToNative()).ConfigureAwait(false);
                 return new AuthResultWrapper(result);
             }
             catch (NSErrorException e)
